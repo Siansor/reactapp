@@ -2,12 +2,15 @@ var React = require('react');
 var List = require('./List.jsx');
 
 var ListManager = React.createClass({
+
     getInitialState: function() {
         return {items: [], newItemText:''};
     },
+
     onChange: function(e) {
       this.setState({newItemText: e.target.value});
     },
+
     handleSubmit: function(e) {
       e.preventDefault();
 
@@ -17,6 +20,7 @@ var ListManager = React.createClass({
 
       this.setState({items: currentItems, newItemText:''});
     },
+
     render: function() {
       return(
         <div>
